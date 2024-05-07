@@ -18,7 +18,6 @@ def mnemonic_generate(seed: int) -> str:
     bip39_max_length = 10
     bip39_word_list = mnemonic_wordlist()
     bip39_buf = bytearray(bip39_max_words * (bip39_max_length + 1))
-    bip39_buf_len = len(bip39_buf)
 
     rng_length = 128 // 8
     rng_data = mnemonic_rng(seed)
